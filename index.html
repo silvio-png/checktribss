@@ -1,48 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CheckTribSS</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background: #061a2a; /* fundo caso a imagem não ocupe tudo */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* container ocupa a tela toda */
-    .wrap {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+<title>CheckTribSS</title>
 
-    /* imagem se adapta à orientação sem distorcer */
-    .hero {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;   /* mostra a imagem inteira */
-      object-position: center;
-      display: block;
-    }
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #061a2a;
+}
 
-    /* opcional: deixa mais “cheio” no modo deitado (pode cortar um pouco) */
-    @media (orientation: landscape) {
-      .hero {
-        object-fit: cover; /* preenche mais a tela no horizontal */
-      }
-    }
-  </style>
+img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <img class="hero" src="home.png" alt="CheckTribSS" />
-  </div>
+
+<img src="home.png">
+
 </body>
 </html>
