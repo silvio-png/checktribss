@@ -1,31 +1,323 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check Trib SS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<title>CheckTribSS</title>
+    body {
+      background: #070b16;
+      color: #fff;
+      line-height: 1.6;
+    }
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #061a2a;
-}
+    header {
+      background: rgba(5, 10, 25, 0.95);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
 
-img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;
-}
-</style>
+    .topo {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #f2c04c;
+    }
+
+    .sublogo {
+      font-size: 12px;
+      color: #ddd;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f2c04c;
+    }
+
+    .btn-iniciar {
+      background: linear-gradient(180deg, #ffcf6b, #d58a0f);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 0 14px rgba(255, 196, 0, 0.35);
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 30px auto 0;
+      padding: 0 20px;
+    }
+
+    .hero-img {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 35px 20px 70px;
+    }
+
+    section {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      color: #f2c04c;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .bloco {
+      margin-bottom: 22px;
+    }
+
+    .bloco h3 {
+      font-size: 21px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .bloco p {
+      font-size: 17px;
+      color: #ddd;
+    }
+
+    .etapas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .etapa {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .etapa h3 {
+      color: #f2c04c;
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .etapa p {
+      color: #ddd;
+      font-size: 16px;
+    }
+
+    .contato-box p {
+      font-size: 18px;
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      background: #060a14;
+      color: #bbb;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    @media (max-width: 768px) {
+      .topo {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      section {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<img src="home.png">
+  <header>
+    <div class="topo">
+      <div>
+        <div class="logo">Check Trib SS</div>
+        <div class="sublogo">Inteligência na Conformidade Fiscal</div>
+      </div>
+
+      <nav>
+        <a href="#solucoes">Soluções</a>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="#" class="btn-iniciar">Iniciar</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <img src="home.png" alt="Imagem principal Check Trib SS" class="hero-img">
+  </div>
+
+  <div class="container">
+    <section id="solucoes">
+      <h2>Soluções</h2>
+
+      <div class="bloco">
+        <h3>Auditoria de IRPF (Pessoa Física)</h3>
+        <p>
+          Utilize nossa IA para cruzar dados de fontes pagadoras, despesas médicas e movimentações financeiras.
+          Identifique riscos de malha fina antes mesmo de enviar sua declaração.
+        </p>
+      </div>
+
+      <div class="bloco">
+        <h3>Conformidade de IRPJ (Pessoa Jurídica)</h3>
+        <p>
+          Análise profunda de obrigações acessórias e balanços. Garantimos que a inteligência de dados trabalhe
+          para manter sua empresa em total conformidade com o Fisco.
+        </p>
+      </div>
+
+      <div class="bloco">
+        <h3>Importação e Automação Digital</h3>
+        <p>
+          Conecte-se via Certificado Digital para importar dados diretamente da Receita Federal.
+          Menos digitação manual, zero erro humano e muito mais agilidade.
+        </p>
+      </div>
+
+      <div class="bloco">
+        <h3>Prevenção de Riscos Fiscais</h3>
+        <p>
+          Nossa tecnologia antecipa inconsistências que poderiam gerar multas, oferecendo um diagnóstico
+          preciso e preventivo.
+        </p>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <h2>Como Funciona</h2>
+
+      <div class="etapas">
+        <div class="etapa">
+          <h3>Acesso Seguro</h3>
+          <p>
+            Você acessa nossa plataforma utilizando seu Certificado Digital, garantindo a proteção total
+            da sua identidade e dos seus dados.
+          </p>
+        </div>
+
+        <div class="etapa">
+          <h3>Processamento por IA</h3>
+          <p>
+            Nossa inteligência artificial proprietária faz o cruzamento de informações e a varredura
+            de possíveis divergências fiscais.
+          </p>
+        </div>
+
+        <div class="etapa">
+          <h3>Relatório de Diagnóstico</h3>
+          <p>
+            Em poucos minutos, você recebe um painel detalhado com o status de conformidade
+            e alertas de pontos que precisam de correção.
+          </p>
+        </div>
+
+        <div class="etapa">
+          <h3>Tranquilidade Fiscal</h3>
+          <p>
+            Com os dados organizados e validados, você ou seu contador podem realizar a transmissão
+            da declaração com total segurança.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+
+      <div class="bloco">
+        <p>
+          A Check Trib SS nasceu da necessidade de transformar a complexidade do sistema tributário brasileiro
+          em clareza através da tecnologia. Somos especialistas em Inteligência na Conformidade Fiscal,
+          unindo o conhecimento contábil avançado ao poder da IA.
+        </p>
+      </div>
+
+      <div class="bloco">
+        <p>
+          Com registro no INPI, nossa plataforma é dedicada a apoiar tanto o contribuinte individual
+          quanto o profissional de contabilidade, oferecendo ferramentas que garantem precisão,
+          segurança e economia de tempo.
+        </p>
+      </div>
+
+      <div class="bloco">
+        <p>
+          Nosso compromisso é ser o escudo tecnológico que protege seu patrimônio contra erros
+          e sanções fiscais.
+        </p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="contato-box">
+        <p><strong>Dúvidas ou Suporte?</strong> Estamos aqui para ajudar você a navegar com segurança pelo mundo fiscal.</p>
+        <p><strong>E-mail:</strong> contato@checktribss.com.br</p>
+        <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 09h às 18h.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2026 Check Trib SS - Inteligência na Conformidade Fiscal
+  </footer>
 
 </body>
 </html>
